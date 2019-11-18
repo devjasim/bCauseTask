@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+.bg-mattBlack, body {
+  background-color: #100E17;
+}
+
+.text-mattBlack {
+  color: #100E17;
+}
+
+.bg-mattGray {
+  background-color: #1E1E24;
+}
+
+.text-mattGray {
+  color: #1E1E24;
+}
+
+.bg-fontWhite {
+  background-color: #E7E7E8;
+}
+
+.text-fontWhite, body {
+  color: #E7E7E8;
+}
+
+.bg-mattGreen {
+  background-color: #FF4F4F;
+}
+
+.text-mattGreen {
+  color: #FF4F4F;
+}
+
+body {
+  font-family: 'Roboto', Sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+body p {
+  line-height: 25px;
+  font-weight: 300;
+}
+
+body h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+body h4 {
+  font-size: 1.5625rem;
+  font-weight: 400;
+}
+/*# sourceMappingURL=main.css.map */

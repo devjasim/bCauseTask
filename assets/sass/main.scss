@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+@function rem($value) {
+    @return unquote(($value/1px)/16+"rem");
+}
+
+$easeTime:0.25s;
+$marginTop: 55px;
+$marginBottom:10px;
+
+$colors: (
+    "mattBlack": "#100E17",
+    "mattGray": "#1E1E24",
+    // "mattGreen": "#0C9882",
+    "fontWhite": "#E7E7E8",
+    "mattGreen":"#FF4F4F"
+
+);
+
+
+@each $colorName, $colorValue in $colors{
+    .bg-#{$colorName}{
+        background-color:#{$colorValue};
+    }
+    .text-#{$colorName}{
+        color:#{$colorValue};
+    }
+}
+
+
+
+body{
+    font-family:'Roboto', Sans-serif;
+    font-weight:400;
+    @extend .bg-mattBlack;
+    font-size:14px;
+    font-weight:400;
+    @extend .text-fontWhite;
+    p{
+        line-height:25px;
+        font-weight:300;
+    }
+    h2{
+        font-size:rem(32px);
+        font-weight:600;
+    }
+    h4{
+        font-size:rem(25px);
+        font-weight:400;
+    }
+}
