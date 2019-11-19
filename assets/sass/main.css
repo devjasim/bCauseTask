@@ -4,19 +4,19 @@
   src: url("../fonts/osaka-re.ttf") format("ttf");
 }
 
-.bg-darkBlue, .section-header-bottom .top-menu .header-nav .nav-full .nav li a:after, .section-header-bottom .header-services .services .button .btn {
+.bg-darkBlue, .btn-sml .btn, .section-header-bottom .top-menu .header-nav .nav-full .nav li a:after, .section-define-one .one-header .intigator:before, .section-define-one .one-header .intigator:after {
   background-color: #0372ba;
 }
 
-.text-darkBlue, .section-header-bottom .top-menu .header-nav .nav-full .nav li a:hover, .section-header-bottom .top-menu .header-nav .nav-full .nav li.active a, .section-header-bottom .header-content .cnt-three .text-five p a, .section-header-bottom .header-services .services .button .btn:hover a, .section-header-bottom .header-services .services .button .btn:hover i {
+.text-darkBlue, .btn-sml .btn:hover a, .btn-sml .btn:hover i, .section-header-bottom .top-menu .header-nav .nav-full .nav li a:hover, .section-header-bottom .top-menu .header-nav .nav-full .nav li.active a, .section-header-bottom .header-content .cnt-three .text-five p a, .section-define-one .one-header .intigator, .section-define-one .one-middle a {
   color: #0372ba;
 }
 
-.bg-sWhite, .section-header-top, .section-header-bottom .header-services, .section-header-bottom .header-services .services .button .btn:hover {
+.bg-sWhite, .btn-sml .btn:hover, .section-header-top, .section-header-bottom .header-bt-sr, .section-header-bottom .header-bt-sr .header-services, .section-define-one .one-middle {
   background-color: #FFFFFF;
 }
 
-.text-sWhite, .section-header-bottom .top-menu .header-nav .nav-full .nav li a, .section-header-bottom .header-content .cnt-one h2, .section-header-bottom .header-content .cnt-three .text-five, .section-header-bottom .header-content .cnt-three .text-five p, .section-header-bottom .header-services .services .button .btn a {
+.text-sWhite, .btn-sml .btn a, .section-header-bottom .top-menu .header-nav .nav-full .nav li a, .section-header-bottom .header-content .cnt-one h2, .section-header-bottom .header-content .cnt-three .text-five, .section-header-bottom .header-content .cnt-three .text-five p {
   color: #FFFFFF;
 }
 
@@ -32,7 +32,7 @@
   background-color: #000000;
 }
 
-.text-sBlack, body, .section-header-top p, .section-header-bottom .header-services .services .sr-cnt h4 {
+.text-sBlack, body, .section-header-top p, .section-header-bottom .header-bt-sr .header-services .services .sr-cnt h4, .section-define-one .one-content p, .one-head {
   color: #000000;
 }
 
@@ -66,6 +66,14 @@
 
 .text-bBlack, .section-header-bottom .header-content .cnt-two .text-four {
   color: #030c00;
+}
+
+.bg-purple, .section-define-one {
+  background-color: #f2f2f3;
+}
+
+.text-purple {
+  color: #f2f2f3;
 }
 
 body {
@@ -118,6 +126,33 @@ img {
   max-width: 1200px;
 }
 
+.btn-sml {
+  position: absolute;
+  top: 80%;
+  left: 20px;
+}
+
+.btn-sml .btn {
+  padding: 0px 5px;
+  border-radius: 20px;
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+  padding-bottom: 5px;
+  line-height: 0;
+}
+
+.btn-sml .btn a {
+  text-decoration: none;
+  line-height: 10px;
+  font-size: 12.8px;
+  display: block;
+  margin-top: 4px;
+}
+
+.btn-sml .btn i {
+  line-height: 3px;
+}
+
 .section-header-top {
   padding: 15px;
 }
@@ -125,24 +160,30 @@ img {
 .section-header-top p {
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: -0.95px;
 }
 
 .section-header-bottom {
-  background: url(../images/header.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+
+.section-header-bottom .section-img {
+  width: 100%;
+  display: block;
 }
 
 .section-header-bottom .img-color-overlay {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.94)), to(rgba(16, 16, 16, 0)));
-  background: linear-gradient(-180deg, rgba(0, 0, 0, 0.94), rgba(16, 16, 16, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.76)), color-stop(rgba(16, 16, 16, 0)), to(rgba(14, 14, 17, 0)));
+  background: linear-gradient(-180deg, rgba(0, 0, 0, 0.76), rgba(16, 16, 16, 0), rgba(14, 14, 17, 0));
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 .section-header-bottom .top-menu {
   height: 65px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(-45deg, #252424, rgba(16, 16, 16, 0.76));
+  background: linear-gradient(-45deg, #252424, rgba(16, 16, 16, 0));
   width: 100%;
 }
 
@@ -152,7 +193,6 @@ img {
 }
 
 .section-header-bottom .top-menu .header-nav .nav-full {
-  display: block;
   float: right;
 }
 
@@ -162,6 +202,10 @@ img {
 
 .section-header-bottom .top-menu .header-nav .nav-full .nav li {
   padding: 0 20px;
+}
+
+.section-header-bottom .top-menu .header-nav .nav-full .nav li:last-child {
+  padding-right: 0;
 }
 
 .section-header-bottom .top-menu .header-nav .nav-full .nav li a {
@@ -192,12 +236,8 @@ img {
   width: 100%;
 }
 
-.section-header-bottom .header-content .container {
-  padding-left: 0;
-}
-
 .section-header-bottom .header-content .cnt-one {
-  margin-top: 3.75rem;
+  margin-top: 70px;
 }
 
 .section-header-bottom .header-content .cnt-one h2 {
@@ -226,10 +266,11 @@ img {
 }
 
 .section-header-bottom .header-content .cnt-three {
-  border: 5px solid rgba(255, 255, 255, 0.6);
+  border: 6px solid rgba(255, 255, 255, 0.6);
   padding: 30px;
   background: rgba(14, 14, 17, 0.6);
   float: right;
+  margin-top: 140px;
 }
 
 .section-header-bottom .header-content .cnt-three .text-five {
@@ -250,22 +291,25 @@ img {
   margin-right: 5px;
 }
 
-.section-header-bottom .header-services {
-  margin-bottom: 1000px;
+.section-header-bottom .header-bt-sr {
+  width: 100%;
+}
+
+.section-header-bottom .header-bt-sr .header-services {
   width: 100%;
   display: block;
   overflow: hidden;
   position: relative;
 }
 
-.section-header-bottom .header-services .services {
+.section-header-bottom .header-bt-sr .header-services .services {
   display: inline-block;
   max-width: 235px;
   height: auto;
   position: relative;
 }
 
-.section-header-bottom .header-services .services img {
+.section-header-bottom .header-bt-sr .header-services .services img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -273,41 +317,128 @@ img {
   margin-left: 10px;
 }
 
-.section-header-bottom .header-services .services .sr-cnt {
+.section-header-bottom .header-bt-sr .header-services .services .sr-cnt {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.section-header-bottom .header-services .services .sr-cnt h4 {
+.section-header-bottom .header-bt-sr .header-services .services .sr-cnt h4 {
   font-size: 20px;
   padding: 20px 51px 0 30px;
 }
 
-.section-header-bottom .header-services .services .button {
-  position: absolute;
-  top: 80%;
-  left: 20px;
-}
-
-.section-header-bottom .header-services .services .button .btn {
-  padding: 0px 5px;
-  border-radius: 20px;
-  -webkit-transition: all ease-in-out 0.25s;
-  transition: all ease-in-out 0.25s;
-  padding-bottom: 5px;
-  line-height: 0;
-}
-
-.section-header-bottom .header-services .services .button .btn a {
-  text-decoration: none;
-  line-height: 10px;
-  font-size: 12.8px;
+.section-define-one {
+  width: 100%;
   display: block;
-  margin-top: 4px;
 }
 
-.section-header-bottom .header-services .services .button .btn i {
-  line-height: 3px;
+.section-define-one .one-header {
+  position: relative;
+}
+
+.section-define-one .one-header .intigator {
+  font-size: 2.25rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.section-define-one .one-header .intigator:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  bottom: 0;
+  left: 47%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.section-define-one .one-header .intigator:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  bottom: 0;
+  right: 47%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.section-define-one .one-content p {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.section-define-one .one-middle {
+  text-align: center;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.section-define-one .one-middle:hover {
+  -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.25), 0 9px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0px 5px rgba(0, 0, 0, 0.25), 0 9px 12px rgba(0, 0, 0, 0.22);
+}
+
+.section-define-one .one-middle a {
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+}
+
+/* The following is all you really need for the effect to work */
+.one-head {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(60%, rgba(255, 255, 255, 0.8)), color-stop(60%, rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0)));
+  font-size: 2.5rem;
+  margin-top: 10px;
+  position: relative;
+  top: 0rem;
+  text-align: center;
+  padding: 0.3125rem;
+  width: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.one-head:before {
+  width: 50%;
+  height: 0.125rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 0;
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, from(rgba(239, 239, 239, 0.8)), color-stop(60%, rgba(148, 148, 148, 0.8)), color-stop(60%, rgba(171, 160, 160, 0.8)), to(rgba(97, 96, 96, 0)));
+}
+
+.one-head:after {
+  width: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 0.125rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, from(rgba(239, 239, 239, 0.8)), color-stop(60%, rgba(148, 148, 148, 0.8)), color-stop(60%, rgba(171, 160, 160, 0.8)), to(rgba(97, 96, 96, 0)));
+}
+
+.one-header .btn-sml {
+  left: 80%;
+  top: 75%;
 }
 /*# sourceMappingURL=main.css.map */
